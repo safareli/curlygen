@@ -1,7 +1,7 @@
 # curlygen
 > generate all variations of strings based on a language like format using curly braces
 
-##example 
+## example 
 ```sh
 > var curlygen = require('curlygen').curlygen
 > curlygen('testSize-{m@s,l@m,xl@l}')

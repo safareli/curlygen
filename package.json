@@ -1,7 +1,7 @@
 {
   "name": "curlygen",
-  "version": "0.1.0",
-  "description": "generate string variations from nested curly brace strings",
+  "version": "0.1.1",
+  "description": "generate all variations of strings based on a language like format using curly braces",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/safareli/curlygen.git"
   },
-  "keywords": [],
+  "keywords": ["generate", "variations"],
   "author": "Irakli Safareli <i.safareli@gmail.com>",
   "license": "MIT",
   "bugs": {
