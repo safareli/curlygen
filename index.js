@@ -81,6 +81,6 @@ var generate = exports.generate = function(ast){
 }
 
 exports.curlygen = R.cond([
-  [R.contains('{'),   R.of]
-  [R.T,               R.compose(join,generate,toAST)]
+  [R.contains('{'),   R.compose(join,generate,toAST)],
+  [R.T,               R.of]
 ])
