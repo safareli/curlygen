@@ -1,6 +1,8 @@
 # curlygen
 > generate all variations of strings based on a language like format using curly braces
 
+# Deprecated in favor of [brace-expansion](https://github.com/juliangruber/brace-expansion)
+
 ## example 
 ```sh
 > var curlygen = require('curlygen').curlygen
