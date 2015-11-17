@@ -1,5 +1,5 @@
 # curlygen
-generate string variations from nested curly brace strings
+> generate all variations of strings based on a language like format using curly braces
 
 ##example 
 ```sh
@@ -28,7 +28,7 @@ generate string variations from nested curly brace strings
 
 ### with React.js
 
-monkeypatch React.createElement and desuger classNames
+I was using a lot responsive utility classes so now i could write them in a nicer way.
 
 ```javascript
 import React from 'react'
@@ -38,7 +38,7 @@ import curlygen from 'curlygen'
 const createElement = React.createElement
 const desugar = R.compose(R.join(' '), R.flatten, R.map(curlygen.curlygen), R.split(' '))
 
-// monkeypatch React
+// monkeypatch React.createElement
 React.createElement = function(el, opts, ...args) {
   var params = Array.prototype.slice.call(arguments)
   if (opts && opts.className) {
@@ -48,16 +48,14 @@ React.createElement = function(el, opts, ...args) {
 }
 ```
 
-instead of writing classes like this:
-
+before:
 ```html
 <h1 className="u-textSize-3xl u-textSize-4xl@s u-textSize-5xl@m u-textSize-6xl@xl ">
   foo bar
 </h1>
 ```
 
-now you can write like so:
-
+after:
 ```html
 <h1 className="u-textSize-{3xl,4xl@s,5xl@m,6xl@xl}">
   foo bar
