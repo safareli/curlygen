@@ -80,7 +80,7 @@ var generate = exports.generate = function(ast){
   return R.map( R.flatten, ( R.commute( R.of, resolved)))
 }
 
-exports.curlygen = R.cond([
+exports.default = exports.curlygen = R.cond([
   [R.contains('{'),   R.compose(join,generate,toAST)],
   [R.T,               R.of]
 ])
